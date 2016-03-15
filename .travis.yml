@@ -74,10 +74,10 @@ script:
       find "target/release/" -maxdepth 1 -type f -exec sh -c 'sha256sum -b "{}" | cut -d\  -f1 > "{}.sha256"' \;;
     fi
   # Run cargo tests
-  - cargo test --verbose
-  - cargo test -p multirust-dist --verbose
+  #- cargo test --verbose
+  #- cargo test -p multirust-dist --verbose
   # Run end-to-end tests
-  - tests/cli.sh
+  #- tests/cli.sh
 
 after_success:
   # Install kcov dependencies
